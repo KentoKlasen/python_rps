@@ -4,8 +4,8 @@ import random
 def main():
 	choices = ['rock', 'paper', 'scissor']
 	user_choice = False
-	cpu_choice = random.choice(choices)
 	while user_choice == False:
+		cpu_choice = random.choice(choices)
 		user_choice = input('enter a choice (rock, paper, scissor): ')
 		print(f'cpu chose {cpu_choice}')
 		if user_choice not in choices:
@@ -15,7 +15,6 @@ def main():
 			if user_choice == cpu_choice:
 				print('tie try again')
 				user_choice = False
-				cpu_choice = random.choice(choices)
 			elif user_choice == 'rock':
 				if cpu_choice == 'scissor':
 					print("you win i guess")
